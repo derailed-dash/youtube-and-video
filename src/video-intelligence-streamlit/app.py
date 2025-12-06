@@ -28,7 +28,8 @@ from video_utils import (
 st.set_page_config(page_title="Dazbo's Video Intelligence", page_icon="🎥")    
 
 APP_NAME = "dazbo-vid-intel-streamlit"
-MODEL_NAME = "gemini-1.5-flash-002"
+# Use the latest gemini-2.5-flash model
+MODEL_NAME = "gemini-2.5-flash"
 MAX_VIDEO_SIZE = 40 # MB
 
 TEST_VIDEOS = "https://www.youtube.com/shorts/41iWg91yFv0"   # Rick Astley short

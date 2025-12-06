@@ -5,8 +5,9 @@ WORKDIR /app
 
 COPY . ./
 
-# Install Node.js - needed for pytubefix
-RUN apt-get update && apt-get install -y nodejs
+# Install Node.js - needed for pytubefix PO token generation
+# nodejs-wheel-binaries (pytubefix dependency) needs system nodejs to generate PO tokens
+RUN apt-get update && apt-get install -y nodejs && rm -rf /var/lib/apt/lists/*
 
 RUN pip install -r requirements.txt
 
